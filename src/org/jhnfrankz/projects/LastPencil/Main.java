@@ -17,9 +17,19 @@ public class Main {
         String firstPlayer = scanner.nextLine();
 
         player1Turn = player1.equals(firstPlayer);
-
         printPencils();
-        System.out.printf("%s is going first!\n", player1Turn ? player1 : player2);
+
+        while (numOfPencils > 0) {
+            System.out.printf("%s's turn:\n", player1Turn ? player1 : player2);
+            int numberRemovePencils = Integer.parseInt(scanner.nextLine());
+
+            numOfPencils -= numberRemovePencils;
+
+            if (numOfPencils > 0) {
+                printPencils();
+                player1Turn = !player1Turn;
+            }
+        }
     }
 
     public static void printPencils() {
