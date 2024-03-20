@@ -128,11 +128,21 @@ public class Main {
             It looks like we will soon have more rabbits!""";
 
         String[] animals = {camel, lion, deer, goose, bat, rabbit};
-        System.out.print("Please enter the number of the habitat you would like to view:");
-        int number = Integer.parseInt(scanner.next());
+        String input = "";
 
-        System.out.println(animals[number] + "\n---\n" +
-                "You've reached the end of the program. To check another habitat, please restart the watcher.");
+        while (!"exit".equals(input)) {
+            System.out.print("Please enter the number of the habitat you would like to view: ");
+            input = scanner.next();
 
+            if (!"exit".equals(input)) {
+                int number = Integer.parseInt(input);
+                if (number >= 0 && number <= animals.length) {
+                    System.out.println(animals[number]);
+                }
+
+            }
+        }
+
+        System.out.println("See you later!");
     }
 }
