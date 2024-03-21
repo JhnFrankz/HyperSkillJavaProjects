@@ -1,4 +1,4 @@
-package org.jhnfrankz.projects.Zookeeper;
+package org.jhnfrankz.projects.easy.Zookeeper;
 
 import java.util.Scanner;
 

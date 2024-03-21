@@ -1,4 +1,4 @@
-package org.jhnfrankz.projects.LastPencil;
+package org.jhnfrankz.projects.easy.LastPencil;
 
 import java.util.Random;
 import java.util.Scanner;
